@@ -10,7 +10,7 @@ const home = () => {
 
   const aboutUsText = document.createElement("h3");
   aboutUsText.textContent =
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+    "90's cafe has continued to be one of world's iconic cafe! With over 30+ franchise worldwide, from Asia to our newly opening location in Germany. The atmosphere in 90's cafe will bring back the 90's nostalgia and mostly importantly make you reminisce your favorite childhood video games ! Perfect place to hangout with your friends and a perfect place to grab a delicious meal! ";
   aboutUsText.classList.add("about-us-text");
 
 
