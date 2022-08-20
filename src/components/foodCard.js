@@ -1,28 +1,24 @@
-const foodCard = () => {
-  const content = document.getElementById("content");
+const foodCard = (name, imgSrc, price, currentTab) => {
+  const menuFoodContainer = document.getElementsByClassName("menu-food-container")[0];
 
-  const landingBackground = document.createElement("div");
-  landingBackground.classList.add("landingBackground");
-  landingBackground.style.backgroundImage =
-    "url('/src/assets/menuPage/menuBG.gif')";
+  const foodCardContainer = document.createElement("div");
+  foodCardContainer.classList.add("food-card");
 
-  const landingTitle = document.createElement("h1");
-  landingTitle.textContent = "Menu";
-  landingTitle.classList.add("landing-title");
+  const foodImg = document.createElement("img")
+  foodImg.src = `/src/assets/menuPage/${currentTab}/${imgSrc}`
+  foodCardContainer.appendChild(foodImg);
 
-  landingBackground.appendChild(landingTitle);
+  const foodTitle = document.createElement("span")
+  foodTitle.textContent = name;
+  foodCardContainer.appendChild(foodTitle);
 
-  const centerSection = document.createElement("div");
-  centerSection.classList.add("center-section");
+  const priceTitle = document.createElement("span")
+  priceTitle.textContent = "$ " + price;
+  foodCardContainer.appendChild(priceTitle);
 
-  content.appendChild(landingBackground);
-  content.appendChild(centerSection);
+  menuFoodContainer.appendChild(foodCardContainer)
 };
 
 export default foodCard;
 
-{/* <div class="food-card">
-  <img src="/src/assets/menuPage/meal/33_curry_dish.png"></img>
-  <span>spaghetti</span>
-  <span>$10</span>
-</div>; */}
+

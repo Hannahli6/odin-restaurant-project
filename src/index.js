@@ -3,26 +3,26 @@ import home from "./pages/home";
 import menu from "./pages/menu";
 import team from "./pages/team";
 
-const render = function () {
+const clear = function () {
   const content = document.getElementById("content");
-  content.style = "";
-  while (content.children.length > 1) {
-    content.children[1].remove();
-  }
+  content.innerHTML = "";
 };
 
 const onTabClick = (link) => {
   switch (link) {
     case "Home":
-      render();
+      clear();
+      navbar(onTabClick);
       home();
       break;
     case "Menu":
-      render();
+      clear();
+      navbar(onTabClick);
       menu();
       break;
     case "Our Team":
-      render();
+      clear();
+      navbar(onTabClick);
       team();
       break;
   }

@@ -1,18 +1,10 @@
-import navbar from "../components/navbar";
+
+import landingBG from "../components/landingBG";
 
 const home = () => {
   const content = document.getElementById("content");
-
-  const landingBackground = document.createElement("div");
-  landingBackground.classList.add("landingBackground");
-  landingBackground.style.backgroundImage = "url('/src/assets/menuPage/homeBG.gif')";
-
-  const landingTitle = document.createElement("h1");
-  landingTitle.textContent = "90's Cafe";
-  landingTitle.classList.add("landing-title");
-
-  landingBackground.appendChild(landingTitle);
-
+  landingBG("home", "90's cafe");
+ 
   const centerSection = document.createElement("div");
   centerSection.classList.add("center-section");
 
@@ -47,7 +39,6 @@ const home = () => {
   centerSection.appendChild(aboutUsText);
   centerSection.appendChild(hourContainer);
   centerSection.appendChild(locationContainer);
-  content.appendChild(landingBackground);
   content.appendChild(centerSection);
 };
 
